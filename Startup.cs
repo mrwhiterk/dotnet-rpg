@@ -33,6 +33,7 @@ namespace dotnet_rpg
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "dotnet_rpg", Version = "v1" });
             });
+            services.AddAutoMapper(typeof(Startup));
             // This tells the code everytime we use ICharacterService, use the implementation inside CharacterService
             services.AddScoped<ICharacterService, CharacterService>();
         }
